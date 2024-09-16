@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SoftcoreLC": {
+      "commandName": "Project"
+    },
+    "Test in Lethal Company": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Lethal Company\\Lethal Company.exe"
+    }
+  }
+}
