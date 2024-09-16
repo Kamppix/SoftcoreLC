@@ -1,17 +1,13 @@
 ﻿using HarmonyLib;
-using SoftcoreLC;
 
-namespace ApparatusRetrieval.Patches
+namespace SoftcoreLC.Patches
 {
-    [HarmonyPatch(typeof(TimeOfDay), "UpdateProfitQuotaCurrentTime")]
-    public class UpdateQuotaPatch
+    [HarmonyPatch(typeof(StartOfRound), "ResetShip")]
+    public class ResetShipPatch
     {
-        private static void Prefix(TimeOfDay __instance)
+        private static void Prefix()
         {
-            if (!StartOfRound.Instance.isChallengeFile && Plugin.AllPlayersDead && __instance.timeUntilDeadline > 0)
-            {
-                __instance.timeUntilDeadline = __instance.timeUntilDeadline - __instance.timeUntilDeadline % __instance.totalTime + __instance.totalTime + 1;
-            }
+            Plugin.AllPlayersDead = false;
         }
     }
 }

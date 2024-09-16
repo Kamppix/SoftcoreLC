@@ -1,7 +1,6 @@
 using HarmonyLib;
-using SoftcoreLC;
 
-namespace ApparatusRetrieval.Patches
+namespace SoftcoreLC.Patches
 {
     [HarmonyPatch(typeof(RoundManager), "DespawnPropsAtEndOfRound")]
     public class ScrapDespawnPatch

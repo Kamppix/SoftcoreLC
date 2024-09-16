@@ -1,7 +1,6 @@
 ﻿using HarmonyLib;
-using SoftcoreLC;
 
-namespace ApparatusRetrieval.Patches
+namespace SoftcoreLC.Patches
 {
     [HarmonyPatch(typeof(TimeOfDay), "OnDayChanged")]
     public class DayChangePatch
