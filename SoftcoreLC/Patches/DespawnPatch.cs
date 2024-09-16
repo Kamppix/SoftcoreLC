@@ -1,8 +1,7 @@
 using HarmonyLib;
-using SoftcoreLC;
 using Unity.Netcode;
 
-namespace ApparatusRetrieval.Patches
+namespace SoftcoreLC.Patches
 {
     [HarmonyPatch(typeof(NetworkObject), "Despawn")]
     public class DespawnPatch
